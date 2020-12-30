@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body style="background-color: gray">
+    <div class="container">
+      <div class="row" style="justify-content: center">
+        <div
+          class="col-8"
+          style="
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0 20px 0;
+          "
+        >
+          <div class="card" style="width: 18rem; height: 100%">
+            <div
+              class="card-header"
+              style="text-align: center; font-weight: 700; font-size: 18px"
+            >
+              Sort integers
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <label for="txtNumber1">Number 1</label>
+
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="txtNumber1"
+                    placeholder="Number 1"
+                  />
+                  <label for="txtNumber2">Number 2</label>
+
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="txtNumber2"
+                    placeholder="Number 2"
+                  />
+                  <label for="txtNumber3">Number 3</label>
+
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="txtNumber3"
+                    placeholder="Number 3"
+                  />
+                </div>
+
+                <button
+                  id="btnCalculate"
+                  type="button"
+                  class="btn btn-primary"
+                  style="width: 100%"
+                >
+                  Sort
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem; height: 100%">
+            <div
+              class="card-header"
+              style="text-align: center; font-weight: 700; font-size: 18px"
+            >
+              Sort integers result
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="form-group" style="text-align: center">
+                  <label style="display: block"
+                    >Number 1:<span id="txtResultNum1"></span
+                  ></label>
+
+                  <label for="txtNumber2" style="display: block"
+                    >Number 2:<span id="txtResultNum2"></span
+                  ></label>
+
+                  <label for="txtNumber3" style="display: block"
+                    >Number 3:<span id="txtResultNum3"></span
+                  ></label>
+                  <span id="sortResult"></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-8"
+          style="
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0 20px 0;
+          "
+        >
+          <div class="card" style="width: 18rem; height: 100%">
+            <div
+              class="card-header"
+              style="text-align: center; font-weight: 700; font-size: 18px"
+            >
+              Welcome user
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <label for="chooseUser">Người dang dùng là ?</label>
+                  <select class="form-control" id="chooseUser">
+                    <option value="opText">---Người dùng---</option>
+                    <option value="opDad">Bố</option>
+                    <option value="opMom">Mẹ</option>
+                    <option value="opBrother">Anh trai</option>
+                    <option value="opYoungSis">Em gái</option>
+                    <option value="opStranger">Người dưng</option>
+                  </select>
+                </div>
+
+                <button
+                  id="btnStart"
+                  type="button"
+                  class="btn btn-primary"
+                  style="width: 100%"
+                >
+                  Start
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem; height: 100%">
+            <div
+              class="card-header"
+              style="text-align: center; font-weight: 700; font-size: 18px"
+            >
+              Result welcome user
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <span id="resultWelcome"></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-8"
+          style="
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0 20px 0;
+          "
+        >
+          <div class="card" style="width: 18rem; height: 100%">
+            <div
+              class="card-header"
+              style="text-align: center; font-weight: 700; font-size: 18px"
+            >
+              Odd and Even number
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <label for="txtNumberOne">Number 1</label>
+
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="txtNumberOne"
+                    placeholder="Number 1"
+                  />
+                  <label for="txtNumberTwo">Number 2</label>
+
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="txtNumberTwo"
+                    placeholder="Number 2"
+                  />
+                  <label for="txtNumberThree">Number 3</label>
+
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="txtNumberThree"
+                    placeholder="Number 3"
+                  />
+                </div>
+
+                <button
+                  id="btnFind"
+                  type="button"
+                  class="btn btn-primary"
+                  style="width: 100%"
+                >
+                  Find
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem; height: 100%">
+            <div
+              class="card-header"
+              style="text-align: center; font-weight: 700; font-size: 18px"
+            >
+              Odd and Even integers result
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="form-group" style="text-align: center">
+                  <label for="txtReNumber1" style="display: block"
+                    >Number 1:<span id="txtReNumber1"></span
+                  ></label>
+
+                  <label for="txtReNumber2" style="display: block"
+                    >Number 2:<span id="txtReNumber2"></span
+                  ></label>
+
+                  <label for="txtReNumber3" style="display: block"
+                    >Number 3:<span id="txtReNumber3"></span
+                  ></label>
+                  <span id="findResult"></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-8"
+          style="
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0 20px 0;
+          "
+        >
+          <div class="card" style="width: 18rem; height: 100%">
+            <div
+              class="card-header"
+              style="text-align: center; font-weight: 700; font-size: 18px"
+            >
+              Triangle
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <label for="txtEdgeA">Edge A</label>
+
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="txtEdgeA"
+                    placeholder="Edge A"
+                  />
+                  <label for="Edge B">Edge B</label>
+
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="txtEdgeB"
+                    placeholder="Edge B"
+                  />
+                  <label for="txtEdgeC">Edge C</label>
+
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="txtEdgeC"
+                    placeholder="Edge C"
+                  />
+                </div>
+
+                <button
+                  id="btnCheck"
+                  type="button"
+                  class="btn btn-primary"
+                  style="width: 100%"
+                >
+                  Check
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem; height: 100%">
+            <div
+              class="card-header"
+              style="text-align: center; font-weight: 700; font-size: 18px"
+            >
+              Triangle result
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="form-group" style="text-align: center">
+                  <label for="txtTriEdgeA" style="display: block"
+                    >Edge A:<span id="txtTriEdgeA"></span
+                  ></label>
+
+                  <label for="txtTriEdgeB" style="display: block"
+                    >Edge B:<span id="txtTriEdgeB"></span
+                  ></label>
+
+                  <label for="txtTriEdgeC" style="display: block"
+                    >Edge C:<span id="txtTriEdgeC"></span
+                  ></label>
+                  <span id="checkResult"></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <!-- BS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
